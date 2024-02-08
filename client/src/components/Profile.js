@@ -1,12 +1,12 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import avatar from '../assets/profile.png';
 import toast, { Toaster } from 'react-hot-toast';
 import { useFormik } from 'formik';
 import { profileValidation } from '../helper/validate';
 import convertToBase64 from '../helper/convert';
 import useFetch from '../hooks/fetch.hook';
-import { updateUser } from '../helper/helper'
-import { useNavigate } from 'react-router-dom'
+import { updateUser } from '../helper/helper';
+import { useNavigate } from 'react-router-dom';
 
 import styles from '../styles/Username.module.css';
 import extend from '../styles/Profile.module.css'
@@ -38,6 +38,7 @@ export default function Profile() {
         success : <b>Update Successfully...!</b>,
         error: <b>Could not Update!</b>
       });
+      navigate('/home');
 
     }
   })
